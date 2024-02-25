@@ -1,9 +1,13 @@
 # Creating a more holistic Credit Score for Consumers
 Lakshmikethan Bethamcharla, lbethamcharla@ucsd.edu
+<br>
 Darren Jiang, dzjiang@ucsd.edu
+<br>
 Sheng Zhou, shz040@ucsd.edu
+<br>
 Victor Thai, v3thai@ucsd.edu
-Brian Duke, Berk Ustun; brian.duke@prismdata.com, berk@ucsd.edu}
+<br>
+Brian Duke, Berk Ustun; brian.duke@prismdata.com, berk@ucsd.edu
 <br>
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br><br>

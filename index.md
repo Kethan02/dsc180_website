@@ -1,23 +1,13 @@
 # Creating a more holistic Credit Score for Consumers
-Lakshmikethan Bethamcharla, lbethamcharla@ucsd.edu
-<br>
-Darren Jiang, dzjiang@ucsd.edu
-<br>
-Sheng Zhou, shz040@ucsd.edu
-<br>
-Victor Thai, v3thai@ucsd.edu
+Lakshmikethan Bethamcharla, Darren Jiang, Sheng Zhou, Victor Thai
 <br>
 Brian Duke, Berk Ustun; brian.duke@prismdata.com, berk@ucsd.edu
 <br>
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br><br>
-**What is the most interesting topic covered in your domain this quarter?** <br>
-The most interesting topic covered in my domain this quarter is how to effectively clean text. For our first quarter project we had to classify the categories of credit card purchases 
-based on the text description of the purchase. It was very interesting because we learned that TFIDF worked very efficiently in separating the purchases by their text description. 
-The descriptions are not clean at all and have a bunch of unnecessary words, characters, and so on that need to be removed. After having our own preliminary cleaning methods, we ran 
-TFIDF to create our features and when put into a model, it works extremely well. I feel like since we learn a lot of methods in school, and it's kind of a stigma that the more complex a 
-model is the better it performs, we tend to realize how efficient the basic methods are. Here with some basic cleaning and TFIDF our group was able to achieve an accuracy of above 95%.
-It goes to show how complex ways aren't always needed to solve a problem. Stacking simple yet effective methods together can yield great results as well.
+
+**A New Credit Score** <br>
+
 <br><br>
 **Describe a potential investigation you would like to pursue for your Quarter 2 Project.**<br>
 For our domain, we have our fixed project that we are going to end up working on which is coming up with our own credit score for a consumer. This score will essentially 

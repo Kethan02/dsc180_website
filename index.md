@@ -6,7 +6,7 @@ Brian Duke, Berk Ustun; brian.duke@prismdata.com, berk@ucsd.edu
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br><br>
 
-**A New Credit Score** <br>
+**Why a New Credit Score** <br>
 <br><br>
 
 **Introduction**<br>

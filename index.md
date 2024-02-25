@@ -5,8 +5,10 @@ Brian Duke, Berk Ustun; brian.duke@prismdata.com, berk@ucsd.edu
 <br>
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br><br>
+
 **A New Credit Score** <br>
 <br><br>
+
 **Describe a potential investigation you would like to pursue for your Quarter 2 Project.**<br>
 For our domain, we have our fixed project that we are going to end up working on which is coming up with our own credit score for a consumer. This score will essentially 
 predict the risk of a consumer not paying his/her bills? An investigation that we are going to pursue would be looking into specific statistics about income and spending habits of the 

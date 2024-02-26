@@ -4,29 +4,29 @@ Lakshmikethan Bethamcharla, Darren Jiang, Sheng Zhou, Victor Thai
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br><br>
 
-### <u>**Why a New Credit Score**<u><br>
+### **<u>Why a New Credit Score<u>**<br>
 <br><br>
 
-### <u>**Introduction**<u><br>
+### **<u>Introduction<u>**<br>
 <br><br>
 
-### <u>**Data**<u><br>
+### **<u>Data<u>**<br>
 <br><br>
 
-### <u>**Feature Creation and Selection**<u><br>
+### **<u>Feature Creation and Selection<u>**<br>
 <br><br>
 
 #### **TF-IDF**<br>
 
-### <u>**Models**<u><br>
+### **<u>Models<u>**<br>
 
 #### **Logisitic Regression**<br>
 
 #### **Neural Net**<br>
 
-### <u>**Results**<u><br>
+### **<u>Results<u>**<br>
 <br><br>
 
-### <u>**Conclusion / Next steps**<u><br>
+### **<u>Conclusion / Next steps<u>**<br>
 <br><br>
 

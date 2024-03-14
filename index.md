@@ -81,4 +81,6 @@ When looking at the results for the risk-assessment models:
 
 ### **Conclusion / Next steps**<br>
 We used both a logistic regression model and a sequential neural network model to determine the effectiveness of your features. The neural network provided more accurate results but took longer to train. The ROC-AUC score measures how well the model can distinguish between default and non-default cases. We created additional features like category spending summaries to give the models more insight into consumer behavior and risk. The next step is to filter down to the most impactful features to create the final credit scoring model.
+
+add more....
 <br>

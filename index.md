@@ -1,8 +1,10 @@
-# Creating a more holistic Credit Score for Consumers
-Lakshmikethan Bethamcharla, Darren Jiang, Sheng Zhou, Victor Thai
+# Credit Scores for the Credit Invisible
+Lakshmikethan Bethamcharla, Darren Jiang, Victor Thai, Sheng Zhou
 <br>
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br><br>
+
+### **Who is Credit Invisible?**
 
 ### **Why a New Credit Score**<br>
 A credit score is a numerical rating that represents the perceived ability of a person or organization to fulfill their financial commitments. The current scoring system in place is one that has been established and in use for a great number of years now, without many changes. Many new systems and additional data on financial behavior are now in place that allow for greater granularity of a consumer's overall financial behavior even without a credit score. The current credit scoring system today primarily relies on a consumer’s previous credit history, leaving those that are just starting out with little to no credit history to be unable to qualify for any loans. With the rise of banking transactions and the use of personal transaction accounts, we aim to use this data to further extrapolate a consumer's behavior.

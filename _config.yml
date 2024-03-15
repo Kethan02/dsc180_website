@@ -1,5 +1,11 @@
-remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: "jeffreytse/jekyll-theme-yat"
 plugins:
 - jekyll-remote-theme
 github:
   is_project_page: false
+
+title: Assessing Probability of Consumer Default based on Historical Banking Transactions
+author: Lakshmikethan Bethamcharla, Darren Jiang, Victor Thai, Sheng Zhou
+
+heading: "Credit Scores for the Credit Invisible"
+subheading: "Lakshmikethan Bethamcharla, Darren Jiang, Victor Thai, Sheng Zhou"

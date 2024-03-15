@@ -49,7 +49,7 @@ We  created over 200 distinct input features like balance summaries, category sp
 ### **Models**<br>
 
 
-#### Logisitic Regression<br>
+#### Logisitic Regression <br>
 We created a Logistic Regression model to serve as a baseline. we created a logistic regression classifier using standard scikit-learn functions. The initial maximum number of epochs was set to 100, but increasing it to 1000 did not significantly improve the model's performance.
 
 #### Neural Net<br>
@@ -80,7 +80,9 @@ When looking at the results for the risk-assessment models:
 <br><br>
 
 ### **Conclusion / Next steps**<br>
-We used both a logistic regression model and a sequential neural network model to determine the effectiveness of your features. The neural network provided more accurate results but took longer to train. The ROC-AUC score measures how well the model can distinguish between default and non-default cases. We created additional features like category spending summaries to give the models more insight into consumer behavior and risk. The next step is to filter down to the most impactful features to create the final credit scoring model.
+The models that we decided to use in our determination of how effective our features are included using a simple Logistic Regression model, along with a Sequential Neural Network. We decided to a model that is very straightforward just simply using previous classification outputs and another model that uses tensors / layers that would provide more granularity on our final output. After looking at both models, the neural network provided more accurate results but took longer to train. We used a  ROC-AUC score that measures how well the model can distinguish between default and non-default scenarios. Throughout the project, we created additional features such as category spending summaries along with feature based statistics to give the models more insight into overall consumer behavior and risk. 
 
-add more....
+Our group aims to continue our next steps into looking at how to filter down our features to an even greater extent. It can be seen that a simpler model may not do as well as a complex model, but similarly amongst our features, a simple set of features would be more interpretable. This is a balance that our group would have to look deeper into. Given that we had more time on this project, we are interested in also looking further into extraneous factors such sa personal assets that could pose as a further way to create a credit scoring system. 
+
+By further exploring those steps, this would create a model that encapsulates a whole vision of how a consumer behaves, generating greater granularity and accuracy into a predicted consumer credit score.
 <br>

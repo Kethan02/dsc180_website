@@ -2,6 +2,10 @@
 Darren Jiang, Lakshmikethan Bethamcharla, Sheng Zhou, Victor Thai
 <br>
 Section: B18, Mentors: Brian Duke & Berk Ustun
+<br>
+
+[Click here to find the Project Repo](https://github.com/JiaDarren/DSC_180A)
+
 <br><br>
 
 ### **What is a Credit Score, and Why Create a New Credit Score?**<br>

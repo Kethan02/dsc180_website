@@ -1,5 +1,5 @@
 # Credit Scores for the Credit Invisible
-Darren Jiang, Lakshmikethan Bethamcharla, Sheng Zhou, Victor Thai
+Lakshmikethan Bethamcharla, Darren Jiang, Victor Thai, Sheng Zhou
 <br>
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br>

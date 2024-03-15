@@ -3,6 +3,8 @@ Darren Jiang, Lakshmikethan Bethamcharla, Sheng Zhou, Victor Thai
 <br>
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br><br>
+[Click here to find the Project Repo](https://github.com/JiaDarren/DSC_180A)
+<br><br>
 
 ### **What is a Credit Score, and Why Create a New Credit Score?**<br>
 A credit score is a rating that represents your predicted credit behavior, such as paying a loan on time. Many financial institutes, such as banks, creditors, or government agencies use credit scores to make decisions on whether to offer you a mortgage, loan, or determine credit limits and interest rates.

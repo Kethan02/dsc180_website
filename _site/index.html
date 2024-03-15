@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Credit Scores for the Credit Invisible | dsc180_website</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Credit Scores for the Credit Invisible" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="dsc180_website" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Credit Scores for the Credit Invisible" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"Credit Scores for the Credit Invisible","name":"dsc180_website","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="icon" href="">
+  <link rel="canonical" href="http://localhost:4000">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="dsc180_website" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8"
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"
+        async></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+<script
+  src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/umd/photoswipe-lightbox.umd.min.js" async></script>
+<script
+  src="//cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/umd/photoswipe.umd.min.js" async></script>
+<link
+  href="//cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.7/photoswipe.min.css"
+  rel="stylesheet"
+/>
+<style>
+  .pswp .pswp__container .pswp__img {
+    background-color: white;
+  }
+</style>
+
+<script>
+  function initPhotoSwipe() {
+    let customOptions = {};
+
+    try {
+      const data = ``.replaceAll("=>", ":");
+      customOptions = JSON.parse(data);
+    } catch (e) {
+      console.info("Invalid custom photo previewer options! " + e.message);
+    }
+
+    // Define object and gallery options
+    const options = Object.assign(
+      {
+        gallery: "section.main",
+        children: "a.photo-swipe",
+        photo_scale: 2,
+        // dynamic import is not supported in UMD version
+        pswpModule: PhotoSwipe,
+      },
+      customOptions
+    );
+
+    const galleryEl = document.querySelector(options.gallery);
+    if (!galleryEl) {
+      return;
+    }
+
+    const imgEls = [];
+    const els = galleryEl.querySelectorAll("img:not(.emoji)");
+    els.forEach((el) => {
+      if (el.src.trim() == "") {
+        return;
+      }
+      if (!imgEls.includes(el)) {
+        imgEls.push(el);
+      }
+    });
+
+    if (imgEls.length === 0) {
+      return;
+    }
+
+    imgEls.forEach((imgEl) => {
+      imgEl.outerHTML = `
+      <a class="photo-swipe"
+        href="${imgEl.src}"
+        data-pswp-width="${
+          Math.max(imgEl.naturalWidth, imgEl.width) * options.photo_scale
+        }"
+        data-pswp-height="${
+          Math.max(imgEl.naturalHeight, imgEl.height) * options.photo_scale
+        }"
+        data-pswp-caption="${imgEl.getAttribute("caption") || imgEl.alt}"
+        target="_blank">
+        ${imgEl.outerHTML}
+      </a>`;
+    });
+
+    // Initialize PhotoSwipe 5
+    var lightbox = new PhotoSwipeLightbox(options);
+
+    lightbox.init();
+  }
+
+  window.addEventListener("load", initPhotoSwipe);
+</script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header site-header-transparent" role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner"><span class="site-brand"><a class="site-brand-inner" rel="author" href="/">
+  <img class="site-favicon" title="dsc180_website" src="" onerror="this.style.display='none'">
+  dsc180_website
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger"><a class="page-link" href="/">CREDIT SCORES FOR THE CREDIT INVISIBLE</a>
+
+
+
+
+</div>
+        </nav></div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;documentElement.setAttribute("data-header-transparent", "");var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="page-banner">
+    <div class="page-banner-img"><div style="background-image: url(/default)"></div>
+        <img class="img-placeholder" src="/default"></div>
+    <div class="wrapper">
+      <div class="page-banner-inner"><div class="page-banner-default">
+            <h1 class="page-banner-heading">
+              Your awesome heading
+            </h1>
+            <h2 class="page-banner-subheading">
+              Your awesome subheading
+            </h2>
+          </div></div>
+    </div>
+  </section><script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="articles">
+  
+
+  <h1 id="credit-scores-for-the-credit-invisible">Credit Scores for the Credit Invisible</h1>
+<p>Lakshmikethan Bethamcharla, Darren Jiang, Victor Thai, Sheng Zhou
+<br />
+Section: B18, Mentors: Brian Duke &amp; Berk Ustun
+<br /><br /></p>
+
+<h3 id="why-a-new-credit-score"><strong>Why a New Credit Score</strong><br /></h3>
+<p>A credit score is a numerical rating that represents the perceived ability of a person or organization to fulfill their financial commitments. The current scoring system in place is one that has been established and in use for a great number of years now, without many changes. Many new systems and additional data on financial behavior are now in place that allow for greater granularity of a consumer’s overall financial behavior even without a credit score. The current credit scoring system today primarily relies on a consumer’s previous credit history, leaving those that are just starting out with little to no credit history to be unable to qualify for any loans. With the rise of banking transactions and the use of personal transaction accounts, we aim to use this data to further extrapolate a consumer’s behavior.
+<br /><br /></p>
+
+<h3 id="introduction"><strong>Introduction</strong><br /></h3>
+<p>Our project’s goal is to create a credit score for individuals. We split the work into two parts: categorizing transactions and building a risk prediction model. First, we cleaned up messy transaction descriptions and used methods such as BERT to accurately classify transactions into categories like groceries or bills. Next, we created features from people’s transaction history, account balances, and estimated income. We then built models like linear regression and neural networks to analyze these features and predict someone’s risk of defaulting on a loan.
+<br /><br /></p>
+
+<h3 id="data"><strong>Data</strong><br /></h3>
+<p>We have four datasets: inflows (money going into accounts), outflows (money going out of accounts), accounts (details on account types and balances), and consumer (information on loan applications and defaults). The inflows dataset has around 513,000 transactions and the outflows dataset has around 1.3 million transactions. The accounts dataset contains information on nearly 4,700 unique accounts. The consumer dataset has details on almost 2,000 consumers and whether they defaulted on their first loan payment. Your goal is to develop a better credit assessment system using the banking records, transaction data, and account values in these datasets.
+<br /><br /></p>
+
+<h3 id="feature-creation-and-selection"><strong>Feature Creation and Selection</strong><br /></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>balance_summary_stats</td>
+      <td>min, max, and standard dev of balance a consumer has in any of their accounts</td>
+    </tr>
+    <tr>
+      <td>cumulative weighted default monthly avg</td>
+      <td>get sum of average weighted value of overdraft per month</td>
+    </tr>
+    <tr>
+      <td>category_summary_stats</td>
+      <td>mean, median, min, and max of spending in each category throughout dataset</td>
+    </tr>
+    <tr>
+      <td>disposable_income</td>
+      <td>amount remaining after combining all inflow and outflow transactions</td>
+    </tr>
+    <tr>
+      <td>avg_monthly_spending</td>
+      <td>average amount of money spent in a month</td>
+    </tr>
+    <tr>
+      <td>num_avg_monthly_purchases</td>
+      <td>average number of purchases in a month</td>
+    </tr>
+    <tr>
+      <td>avg_monthly_cat_spending</td>
+      <td>average amount of money spent in a month for each category</td>
+    </tr>
+    <tr>
+      <td>avg_monthly_cat_count</td>
+      <td>average amount of purchases in a month for each category</td>
+    </tr>
+    <tr>
+      <td>num_savings_transfer</td>
+      <td>number of times someone has pulled from savings account</td>
+    </tr>
+    <tr>
+      <td>insufficient_bal</td>
+      <td>boolean for whether a consumer has an account that is &lt;= 0 at time of evaluation</td>
+    </tr>
+    <tr>
+      <td>num_accounts</td>
+      <td>total number of accounts a consumer has</td>
+    </tr>
+    <tr>
+      <td>monthly_cat_slope</td>
+      <td>slope of spending for each category</td>
+    </tr>
+    <tr>
+      <td>non_essential_ratio</td>
+      <td>proportion of spending done in non-essential vs essential categories</td>
+    </tr>
+    <tr>
+      <td>stand_balance_slope</td>
+      <td>slope of monthly balance</td>
+    </tr>
+    <tr>
+      <td>positive remaining ratio</td>
+      <td>amount of months where cash flow is positive out of all months in dataset for each consumer</td>
+    </tr>
+    <tr>
+      <td>credit ratio</td>
+      <td>maximum number of consecutive months in which a consumer pays of a loan</td>
+    </tr>
+    <tr>
+      <td>prop spending</td>
+      <td>percentage of total consumer spending for each category</td>
+    </tr>
+    <tr>
+      <td>overdraft freq</td>
+      <td>boolean value of users with more than 1 monthly overdraft transaction</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We  created over 200 distinct input features like balance summaries, category spending, disposable income, monthly averages, and spending ratios. Creating monthly features required splitting the data by year and month and using the median. We filtered to the most effective features for the final model to avoid overfitting.</p>
+
+<p><img src="/boxplot1.png" alt="Boxplots of Most Significant Features" /></p>
+
+<p><br /><br /></p>
+
+<h3 id="models"><strong>Models</strong><br /></h3>
+
+<h4 id="logisitic-regression">Logisitic Regression<br /></h4>
+<p>We created a Logistic Regression model to serve as a baseline. we created a logistic regression classifier using standard scikit-learn functions. The initial maximum number of epochs was set to 100, but increasing it to 1000 did not significantly improve the model’s performance.</p>
+
+<h4 id="neural-net">Neural Net<br /></h4>
+
+<p>We trained a sequential neural network initially for 500 epochs with batch size 8, then reduced to 200 epochs with batch size 64 for faster training. The neural network has 5 hidden layers with sizes 12, 24, 24, 12, and 6. It takes in 40 features and outputs the probability of default through a sigmoid function. We optimized the threshold by testing different values on the validation set to maximize the ROC-AUC score. The model with the lowest validation loss during training is used as the final model.</p>
+
+<p><img src="/Neural.png" alt="Boxplots of Most Significant Features" />
+<br /><br /></p>
+
+<h3 id="results"><strong>Results</strong><br /></h3>
+
+<p>For classifying memos by category of credit card transactions, we utilized our cleaned data
+with three different models to see which could perform the best.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Memo Classification Model</th>
+      <th>Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BERT</td>
+      <td>88%</td>
+    </tr>
+    <tr>
+      <td>Logistic Regression with TF-IDF</td>
+      <td>97%</td>
+    </tr>
+    <tr>
+      <td>Decision Tree Classifier with TF-IDF</td>
+      <td>98%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>When looking at the results for the risk-assessment models:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Risk Assessment Model</th>
+      <th>ROC-AUC Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>0.57778</td>
+    </tr>
+    <tr>
+      <td>Sequential NN</td>
+      <td>0.78500</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /><br /></p>
+
+<h3 id="conclusion--next-steps"><strong>Conclusion / Next steps</strong><br /></h3>
+<p>We used both a logistic regression model and a sequential neural network model to determine the effectiveness of your features. The neural network provided more accurate results but took longer to train. The ROC-AUC score measures how well the model can distinguish between default and non-default cases. We created additional features like category spending summaries to give the models more insight into consumer behavior and risk. The next step is to filter down to the most impactful features to create the final credit scoring model.</p>
+
+<p>add more….
+<br /></p>
+
+
+
+  
+
+
+
+
+
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="common-list">
+  <ul>
+    <li>
+      <a href="/index.html">
+        All<span>0</span>
+      </a>
+    </li>
+
+    
+  </ul>
+</div>
+
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner"><div></div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

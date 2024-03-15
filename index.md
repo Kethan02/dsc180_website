@@ -4,7 +4,8 @@ Lakshmikethan Bethamcharla, Darren Jiang, Victor Thai, Sheng Zhou
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br>
 
-[Click here to find the Project Repo](https://github.com/JiaDarren/DSC_180A)
+[Click here for the Project Git](https://github.com/JiaDarren/DSC_180A) <br>
+[Click here for the Project Report](https://github.com/Kethan02/artifact-directory-template/blob/main/report.pdf)
 
 <br><br>
 
@@ -95,4 +96,5 @@ Based on our current work, we have been able to predict consumer default. The ne
 By further exploring those steps, this would create a model that encapsulates a whole vision of how a consumer behaves, generating greater granularity and accuracy into a predicted consumer credit score.
 <br>
 
-[Click here to find the Project Repo](https://github.com/JiaDarren/DSC_180A)
+[Click here for the Project Git](https://github.com/JiaDarren/DSC_180A) <br>
+[Click here for the Project Report](https://github.com/Kethan02/artifact-directory-template/blob/main/report.pdf)

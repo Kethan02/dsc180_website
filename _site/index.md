@@ -1,11 +1,19 @@
 # Credit Scores for the Credit Invisible
-Lakshmikethan Bethamcharla, Darren Jiang, Victor Thai, Sheng Zhou
+Darren Jiang, Lakshmikethan Bethamcharla, Sheng Zhou, Victor Thai
 <br>
 Section: B18, Mentors: Brian Duke & Berk Ustun
 <br><br>
 
-### **Why a New Credit Score**<br>
+### **What is a Credit Score, and Why Create a New Credit Score?**<br>
+A credit score is a rating that represents your predicted credit behavior, such as paying a loan on time. Many financial institutes, such as banks, creditors, or government agencies use credit scores to make decisions on whether to offer you a mortgage, loan, or determine credit limits and interest rates.
+
+While many factor impact your credit score, the primary system today requires building a credit history, which could take months to years of positive credit reports. As a result, people with limited or no established credit history 
+
 A credit score is a numerical rating that represents the perceived ability of a person or organization to fulfill their financial commitments. The current scoring system in place is one that has been established and in use for a great number of years now, without many changes. Many new systems and additional data on financial behavior are now in place that allow for greater granularity of a consumer's overall financial behavior even without a credit score. The current credit scoring system today primarily relies on a consumer’s previous credit history, leaving those that are just starting out with little to no credit history to be unable to qualify for any loans. With the rise of banking transactions and the use of personal transaction accounts, we aim to use this data to further extrapolate a consumer's behavior.
+<br><br>
+
+### **Who is Credit Invisible?**<br>
+
 <br><br>
 
 ### **Introduction**<br>
